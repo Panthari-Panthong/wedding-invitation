@@ -131,11 +131,26 @@
   justify-content: center;
   align-items: center;
   .splide {
-    max-width: 120rem;
-  }
-  img {
-    max-height: 80vh;
     width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    &__slide {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        height: 400px;
+
+        @include responsiveMax($responsive_switch--big) {
+          height: 300px;
+        }
+
+        @include responsiveMax($responsive_switch--small) {
+          height: 200px;
+        }
+      }
+    }
   }
 }
 

@@ -5,14 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
     autoWidth: true,
     autoplay: true,
     gap: "2rem",
+    perPage: 1,
     breakpoints: {
-      640: {
-        // perPage: 2,
-        gap: ".7rem",
+      600: {
+        perPage: 1,
       },
-      480: {
-        // perPage: 1,
-        gap: ".7rem",
+      900: {
+        perPage: 2,
+      },
+      1200: {
+        perPage: 3,
       },
     },
   });
