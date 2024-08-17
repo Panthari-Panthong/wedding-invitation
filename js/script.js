@@ -5,8 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
     autoplay: true,
     autoWidth: true,
     autoHeight: true,
-    // gap: "2rem",
-    // perPage: 3,
+    gap: "2rem",
+    breakpoints: {
+      640: {
+        gap: "1rem",
+      },
+    },
   });
 
   splide.mount();

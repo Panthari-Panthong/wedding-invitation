@@ -144,10 +144,20 @@
 
     &__slide {
       img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
         object-fit: contain;
         max-height: 80vh;
+
+        @include responsiveMax($responsive_switch--small) {
+          max-width: 80vw;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__container {
+        height: 100%;
       }
     }
   }
