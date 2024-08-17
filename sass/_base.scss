@@ -1,0 +1,100 @@
+/* 
+    COLORS
+    GREEN -- #40503A
+*/
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-dark-green: #40503a;
+$color-green: #888f6f;
+
+$color-brown: #815533;
+$color-grey: #838486;
+$color-beige: #dcc2a9;
+
+$pagewidth: 120rem;
+
+$responsive_switch--huge: 1440px;
+$responsive_switch--bigger: 1366px;
+$responsive_switch--menu: 1240px;
+$responsive_switch--big: 1000px;
+$responsive_switch--small: 700px;
+$responsive_switch--mini: 480px;
+
+// Responsive shortcuts
+@mixin responsiveMax($break) {
+  @media only screen and (max-width: $break) {
+    @content;
+  }
+}
+
+@mixin responsiveMin($break) {
+  @media only screen and (min-width: $break) {
+    @content;
+  }
+}
+
+@mixin responsiveMinMax($breakMin, $breakMax) {
+  @media only screen and (min-width: $breakMin) and (max-width: $breakMax) {
+    @content;
+  }
+}
+
+%pagewidth {
+  max-width: $pagewidth;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include responsiveMinMax(
+    $responsive_switch--big + 1px,
+    $responsive_switch--huge
+  ) {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  @include responsiveMinMax(
+    $responsive_switch--small + 1px,
+    $responsive_switch--big
+  ) {
+    padding-right: 75px;
+    padding-left: 75px;
+  }
+
+  @include responsiveMinMax(
+    $responsive_switch--mini + 1px,
+    $responsive_switch--small
+  ) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @include responsiveMax($responsive_switch--mini) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px
+}
+
+body {
+  font-family: "Chonburi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+}

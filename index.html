@@ -4,11 +4,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Chonburi&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Panthari and Jeffrey | The wedding</title>
 </head>
 
 <body>
+    <header class="header">
+        <div class="text-box">
+            <h1 class="heading--primary">Panthari & Jeffrey</h1>
+            <h3 class="heading--tertiary">Sunday, 10<sup>th</sup> November 2024</h3>
+        </div>
 
+    </header>
+
+    <section class="countdown-container">
+        <h2 class="heading--secondary">Please join us in celebrating our love, in...</h2>
+        <ul>
+            <li><span id="days"></span>days</li>
+            <li><span id="hours"></span>Hours</li>
+            <li><span id="minutes"></span>Minutes</li>
+            <li><span id="seconds"></span>Seconds</li>
+        </ul>
+    </section>
+
+    <section class="about-rsvp">
+        <div class="about-rsvp__left">
+            <img src="./img/photo-2.jpg" alt="">
+        </div>
+        <div class="about-rsvp__right">
+            <h2 class="heading--secondary">R.S.V.P</h2>
+            <h3 class="heading-seconary-sub">( ตอบรับการเข้าร่วมงาน )</h3>
+
+            <p>เพื่อให้เราได้จัดเตรียมการล่วงหน้าได้อย่างเหมาะสม<br>
+                ขอรบกวนทุกท่านทำแบบตอบรับเข้าร่วมงานให้เราด้วยนะคะ</p>
+
+            <a href="https://docs.google.com/forms/d/1Lv_ukshbP__LHgot-7K-8nRZoP5sDR5Ac2Hu4o0sOys/edit" target="_blank"
+                rel="noopener noreferrer" class="btn">
+                <span>แบบตอบรับการเข้าร่วมงาน</span><br>
+                <span>Accept attending</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="splide" aria-label="Slide Container Example">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <!-- Horizontal -->
+                    <li class="splide__slide">
+                        <div class="splide__slide__container">
+                            <img src="img/149-1.jpg">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="splide__slide__container">
+                            <img src="img/051-1.jpg">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="splide__slide__container">
+                            <img src="img/095-1.jpg">
+                        </div>
+                    </li>
+                    <!-- Horizontal -->
+                    <li class="splide__slide">
+                        <div class="splide__slide__container">
+                            <img src="img/136-1.jpg">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="splide__slide__container">
+                            <img src="img/004.jpg">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="splide__slide__container">
+                            <img src="img/005.jpg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <h2 class="heading--secondary">Wedding schedule</h2>
+        <img src="img/line.png" alt="line" class="line">
+        <div class="timeline-event">
+            <div class="event">
+                <div class="event-icon religious-ceremony"></div>
+                <div class="event-date">07.09</div>
+                <div class="event-title">พิธีสงฆ์</div>
+                <div class="event-description">RELIGIOUS CEREMONY</div>
+            </div>
+
+            <div class="event">
+                <div class="event-icon engagement-ceremony"></div>
+                <div class="event-date">08.29</div>
+                <div class="event-title">พิธีหมั้น</div>
+                <div class="event-description">ENGAGEMENT CEREMONY</div>
+            </div>
+
+            <div class="event">
+                <div class="event-icon respect-elders"></div>
+                <div class="event-date">09.09</div>
+                <div class="event-title">พิธีรับไหว้</div>
+                <div class="event-description">PAYING RESPECTS TO THE ELDERS</div>
+            </div>
+
+            <div class="event">
+                <div class="event-icon water-blessing"></div>
+                <div class="event-date">10.29</div>
+                <div class="event-title">พิธีรดน้ำสังข์</div>
+                <div class="event-description">WATER BLESSING CEREMONY</div>
+            </div>
+
+            <div class="event">
+                <div class="event-icon wedding-reception"></div>
+                <div class="event-date">18.00</div>
+                <div class="event-title">ฉลองมงคลสมรส</div>
+                <div class="event-description">WEDDING RECEPTION</div>
+            </div>
+        </div>
+
+        <div class="timeline-theme">
+            <h3>Theme color</h3>
+            <div class="timeline-theme__wrapper">
+                <div class="theme beige"></div>
+                <div class="theme cream"></div>
+                <div class="theme green"></div>
+                <div class="theme grey"></div>
+                <div class="theme brown"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location">
+        <div class="location-wrapper">
+            <div class="location-left">
+                <img src="img/location.png" alt="location">
+                <div class="text-container">
+                    <h3>Chanmai Resort</h3>
+                    <p>Ban Khwang, Maha Rat District,
+                        Phra Nakhon Si Ayutthaya 13150</p>
+                    <a href="https://www.google.com/maps/dir//Chan+Mai+Resort+Ban+Khwang,+Maha+Rat+District+Phra+Nakhon+Si+Ayutthaya+13150+Thailand/@14.5803041,100.526123,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x30e20f344ec16807:0x9202f8284eded713!2m2!1d100.526123!2d14.5803041?entry=ttu"
+                        target="_blank" class="btn">Get Directions
+
+                    </a>
+                </div>
+            </div>
+            <div class="location-right">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.329179748029!2d100.52354271051064!3d14.580309277514674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e20f344ec16807%3A0x9202f8284eded713!2sChan%20Mai%20Resort!5e0!3m2!1sen!2snl!4v1723826936156!5m2!1sen!2snl"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-wrapper">
+            <h1 class="heading--primary">WE ARE PLEASED TO INVITE YOU TO Our WEDDING</h1>
+            <p class="heading--tertiary">"We hope to see you on our special day"</p>
+        </div>
+    </section>
+
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    "></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
