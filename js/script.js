@@ -5,23 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     autoplay: true,
     autoWidth: true,
     autoHeight: true,
-    gap: "2rem",
-    perPage: 3,
-
-    breakpoints: {
-      600: {
-        perPage: 1,
-        gap: "1rem",
-      },
-      900: {
-        perPage: 2,
-        gap: "1rem",
-      },
-      1200: {
-        perPage: 3,
-        gap: "1rem",
-      },
-    },
+    // gap: "2rem",
+    // perPage: 3,
   });
 
   splide.mount();
