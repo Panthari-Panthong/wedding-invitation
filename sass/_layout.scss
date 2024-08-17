@@ -1,9 +1,4 @@
 .header {
-  // height: 95vh;
-  // background-image: url("../img/hero.jpg");
-  // background-size: cover;
-  // background-position: bottom;
-
   background-image: url("../img/hero.jpg");
 
   /* Set a specific height */
@@ -15,6 +10,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 10%;
+
+  @include responsiveMax($responsive_switch--big) {
+    background-attachment: scroll;
+  }
 }
 
 .text-box {
@@ -29,22 +28,31 @@
 
 // Section Countdown
 .countdown-container {
+  @extend %pagewidth;
   text-align: center;
   padding: 20px 0;
   color: $color-dark-green;
 
   li {
     font-family: "Roboto", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-align: center;
 
     display: inline-block;
     list-style-type: none;
     padding: 1em;
+
+    @include responsiveMax($responsive_switch--small) {
+      font-size: 1.5rem;
+    }
     span {
       display: block;
       font-size: 4.5rem;
+
+      @include responsiveMax($responsive_switch--small) {
+        font-size: 3rem;
+      }
     }
   }
 }
@@ -62,31 +70,51 @@
 
   height: 100%;
 
+  @include responsiveMax($responsive_switch--small) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__left {
     width: calc((100% - 2 * 50px) / 3);
     margin-right: 50px;
-    border-top-left-radius: 50rem;
-    border-top-right-radius: 50rem;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    @include responsiveMax($responsive_switch--small) {
+      width: 100%;
+      margin-right: 0;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5rem;
+    }
 
     img {
+      width: 100%;
       border-top-left-radius: 50rem;
       border-top-right-radius: 50rem;
       height: 100%;
-    }
-  }
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
-  img {
-    width: 100%;
+      @include responsiveMax($responsive_switch--small) {
+        width: 50%;
+      }
+    }
   }
 
   &__right {
     width: calc(2 * (100% / 3));
     text-align: center;
-    padding-right: 5rem;
+
+    @include responsiveMax($responsive_switch--small) {
+      width: 100%;
+    }
 
     h3 {
       margin-bottom: 4rem;
+
+      @include responsiveMax($responsive_switch--small) {
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -114,7 +142,6 @@
 // timeline
 .timeline {
   max-width: $pagewidth;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,11 +157,15 @@
     text-transform: uppercase;
   }
 
-  h3 {
-    font-size: 24px;
+  .heading--tertiary {
+    font-family: "Baskervville", sans-serif;
     color: $color-dark-green;
     text-transform: uppercase;
     margin-right: 4rem;
+
+    @include responsiveMax($responsive_switch--small) {
+      margin-right: 1rem;
+    }
   }
 
   img {
@@ -147,11 +178,20 @@
     display: flex;
     gap: 1rem;
     padding: 20px;
+    justify-content: center;
+
+    @include responsiveMax($responsive_switch--small) {
+      flex-wrap: wrap;
+    }
 
     .event {
       text-align: center;
       position: relative;
-      width: calc(100% / 5);
+      width: calc((100% / 5) - 1rem);
+
+      @include responsiveMax($responsive_switch--small) {
+        width: calc((50%) - 1rem);
+      }
 
       .event-icon {
         width: 10rem;
@@ -162,6 +202,12 @@
         background-size: 8rem;
         background-repeat: no-repeat;
         background-position: center;
+
+        @include responsiveMax($responsive_switch--small) {
+          width: 6rem;
+          height: 6rem;
+          background-size: 5rem;
+        }
 
         &.religious-ceremony {
           background-image: url("../img/religious-icon.png");
@@ -188,14 +234,19 @@
       }
 
       .event-title {
-        // font-size: 12px;
         color: #2f3924;
         margin-bottom: 5px;
+        @include responsiveMax($responsive_switch--small) {
+          font-size: 1.2rem;
+        }
       }
 
       .event-description {
-        // font-size: 12px;
         color: #6e7764;
+
+        @include responsiveMax($responsive_switch--small) {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -205,9 +256,17 @@
     align-items: center;
     margin: 60px 0;
 
+    @include responsiveMax($responsive_switch--small) {
+      margin: 40px 0;
+    }
+
     &__wrapper {
       display: flex;
       gap: 20px;
+
+      @include responsiveMax($responsive_switch--small) {
+        gap: 10px;
+      }
     }
   }
 
@@ -215,6 +274,11 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+
+    @include responsiveMax($responsive_switch--small) {
+      width: 30px;
+      height: 30px;
+    }
 
     &.cream {
       background-color: #dcc2a9;
@@ -250,6 +314,12 @@
     flex-wrap: wrap;
     padding-top: 10rem;
     padding-bottom: 10rem;
+
+    @include responsiveMax($responsive_switch--small) {
+      flex-direction: column;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
   }
 
   &-left {
@@ -257,6 +327,12 @@
     text-align: center;
 
     margin-right: 5rem;
+
+    @include responsiveMax($responsive_switch--small) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 5rem;
+    }
 
     img {
       width: 60px;
@@ -274,6 +350,10 @@
 
   &-right {
     width: calc((100% / 2));
+
+    @include responsiveMax($responsive_switch--small) {
+      width: 100%;
+    }
 
     iframe {
       width: 100%;
@@ -299,10 +379,5 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-  }
-
-  h1 {
-    font-size: 7rem;
-    color: $color-white;
   }
 }
