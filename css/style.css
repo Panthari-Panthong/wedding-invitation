@@ -2,24 +2,24 @@
     COLORS
     GREEN -- #40503A
 */
-.countdown-container, .about-rsvp, .timeline-event, .location-wrapper, .footer-wrapper {
+.text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper {
   max-width: 120rem;
   margin-right: auto;
   margin-left: auto; }
   @media only screen and (min-width: 1001px) and (max-width: 1440px) {
-    .countdown-container, .about-rsvp, .timeline-event, .location-wrapper, .footer-wrapper {
+    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper {
       padding-right: 100px;
       padding-left: 100px; } }
   @media only screen and (min-width: 701px) and (max-width: 1000px) {
-    .countdown-container, .about-rsvp, .timeline-event, .location-wrapper, .footer-wrapper {
+    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper {
       padding-right: 75px;
       padding-left: 75px; } }
   @media only screen and (min-width: 481px) and (max-width: 700px) {
-    .countdown-container, .about-rsvp, .timeline-event, .location-wrapper, .footer-wrapper {
+    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper {
       padding-right: 50px;
       padding-left: 50px; } }
   @media only screen and (max-width: 480px) {
-    .countdown-container, .about-rsvp, .timeline-event, .location-wrapper, .footer-wrapper {
+    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper {
       padding-right: 25px;
       padding-left: 25px; } }
 
@@ -55,6 +55,10 @@ body {
   @media only screen and (max-width: 1000px) {
     .header {
       background-attachment: scroll; } }
+  @media only screen and (max-width: 700px) {
+    .header .heading--primary {
+      display: flex;
+      flex-direction: column; } }
 
 .text-box {
   display: flex;
@@ -67,7 +71,6 @@ body {
 
 .countdown-container {
   text-align: center;
-  padding: 20px 0;
   color: #40503a; }
   .countdown-container li {
     font-family: "Roboto", sans-serif;
@@ -80,6 +83,9 @@ body {
     @media only screen and (max-width: 700px) {
       .countdown-container li {
         font-size: 1.5rem; } }
+    @media only screen and (max-width: 480px) {
+      .countdown-container li {
+        font-size: 1rem; } }
     .countdown-container li span {
       display: block;
       font-size: 4.5rem; }
@@ -160,12 +166,14 @@ body {
       height: 100%; }
 
 .timeline {
-  max-width: 120rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 8rem; }
+  @media only screen and (max-width: 700px) {
+    .timeline {
+      margin-top: 4rem; } }
   .timeline .line {
     width: 50%;
     margin-top: -2rem; }
@@ -189,7 +197,8 @@ body {
     justify-content: center; }
     @media only screen and (max-width: 700px) {
       .timeline-event {
-        flex-wrap: wrap; } }
+        flex-wrap: wrap;
+        margin: 3rem 0; } }
     .timeline-event .event {
       text-align: center;
       position: relative;
@@ -243,7 +252,7 @@ body {
     margin: 60px 0; }
     @media only screen and (max-width: 700px) {
       .timeline-theme {
-        margin: 40px 0; } }
+        margin: 20px 0; } }
     .timeline-theme__wrapper {
       display: flex;
       gap: 20px; }

@@ -14,9 +14,16 @@
   @include responsiveMax($responsive_switch--big) {
     background-attachment: scroll;
   }
+  .heading--primary {
+    @include responsiveMax($responsive_switch--small) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 .text-box {
+  @extend %pagewidth;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -30,7 +37,7 @@
 .countdown-container {
   @extend %pagewidth;
   text-align: center;
-  padding: 20px 0;
+  // padding: 20px 0;
   color: $color-dark-green;
 
   li {
@@ -45,6 +52,10 @@
 
     @include responsiveMax($responsive_switch--small) {
       font-size: 1.5rem;
+    }
+
+    @include responsiveMax($responsive_switch--mini) {
+      font-size: 1rem;
     }
     span {
       display: block;
@@ -165,12 +176,15 @@
 
 // timeline
 .timeline {
-  max-width: $pagewidth;
+  @extend %pagewidth;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 8rem;
+  @include responsiveMax($responsive_switch--small) {
+    margin-top: 4rem;
+  }
 
   .line {
     width: 50%;
@@ -206,6 +220,7 @@
 
     @include responsiveMax($responsive_switch--small) {
       flex-wrap: wrap;
+      margin: 3rem 0;
     }
 
     .event {
@@ -281,7 +296,7 @@
     margin: 60px 0;
 
     @include responsiveMax($responsive_switch--small) {
-      margin: 40px 0;
+      margin: 20px 0;
     }
 
     &__wrapper {
