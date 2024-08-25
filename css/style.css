@@ -2,24 +2,24 @@
     COLORS
     GREEN -- #40503A
 */
-.text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper {
+.text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper, .copyright-wrapper {
   max-width: 120rem;
   margin-right: auto;
   margin-left: auto; }
   @media only screen and (min-width: 1001px) and (max-width: 1440px) {
-    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper {
+    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper, .copyright-wrapper {
       padding-right: 100px;
       padding-left: 100px; } }
   @media only screen and (min-width: 701px) and (max-width: 1000px) {
-    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper {
+    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper, .copyright-wrapper {
       padding-right: 75px;
       padding-left: 75px; } }
   @media only screen and (min-width: 481px) and (max-width: 700px) {
-    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper {
+    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper, .copyright-wrapper {
       padding-right: 50px;
       padding-left: 50px; } }
   @media only screen and (max-width: 480px) {
-    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper {
+    .text-box, .countdown-container, .about-rsvp, .timeline, .timeline-event, .location-wrapper, .footer-wrapper, .copyright-wrapper {
       padding-right: 25px;
       padding-left: 25px; } }
 
@@ -54,7 +54,8 @@ body {
   padding-top: 10%; }
   @media only screen and (max-width: 1000px) {
     .header {
-      background-attachment: scroll; } }
+      background-attachment: scroll;
+      height: 80vh; } }
   @media only screen and (max-width: 700px) {
     .header .heading--primary {
       display: flex;
@@ -72,6 +73,9 @@ body {
 .countdown-container {
   text-align: center;
   color: #40503a; }
+  @media only screen and (max-width: 700px) {
+    .countdown-container {
+      margin-top: 3rem; } }
   .countdown-container li {
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
@@ -111,10 +115,9 @@ body {
     @media only screen and (max-width: 700px) {
       .about-rsvp__left {
         width: 100%;
-        margin-right: 0;
         display: flex;
         justify-content: center;
-        margin-bottom: 5rem; } }
+        margin: 3rem 0; } }
     .about-rsvp__left img {
       width: 100%;
       border-top-left-radius: 50rem;
@@ -144,6 +147,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 700px) {
+    .gallery {
+      height: 80vh; } }
   .gallery img {
     max-width: 100%;
     height: auto;
@@ -164,6 +170,9 @@ body {
           object-fit: cover; } }
     .gallery .splide__slide__container {
       height: 100%; }
+      @media only screen and (max-width: 700px) {
+        .gallery .splide__slide__container {
+          height: 60vh; } }
 
 .timeline {
   display: flex;
@@ -327,12 +336,26 @@ body {
   background-size: cover;
   color: #fff;
   text-align: center; }
+  @media only screen and (max-width: 700px) {
+    .footer {
+      height: 60vh; } }
   .footer-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%; }
+
+.copyright {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+  @media only screen and (max-width: 700px) {
+    .copyright {
+      font-size: 1rem; } }
 
 .heading--primary {
   font-family: "Baskervville", sans-serif;

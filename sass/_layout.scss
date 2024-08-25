@@ -13,6 +13,7 @@
 
   @include responsiveMax($responsive_switch--big) {
     background-attachment: scroll;
+    height: 80vh;
   }
   .heading--primary {
     @include responsiveMax($responsive_switch--small) {
@@ -39,6 +40,10 @@
   text-align: center;
   // padding: 20px 0;
   color: $color-dark-green;
+
+  @include responsiveMax($responsive_switch--small) {
+    margin-top: 3rem;
+  }
 
   li {
     font-family: "Roboto", sans-serif;
@@ -93,10 +98,10 @@
 
     @include responsiveMax($responsive_switch--small) {
       width: 100%;
-      margin-right: 0;
+      // margin-right: 0;
       display: flex;
       justify-content: center;
-      margin-bottom: 5rem;
+      margin: 3rem 0;
     }
 
     img {
@@ -142,6 +147,10 @@
   justify-content: center;
   align-items: center;
 
+  @include responsiveMax($responsive_switch--small) {
+    height: 80vh;
+  }
+
   img {
     max-width: 100%;
     height: auto;
@@ -169,6 +178,9 @@
 
       &__container {
         height: 100%;
+        @include responsiveMax($responsive_switch--small) {
+          height: 60vh;
+        }
       }
     }
   }
@@ -411,6 +423,10 @@
   color: $color-white;
   text-align: center;
 
+  @include responsiveMax($responsive_switch--small) {
+    height: 60vh;
+  }
+
   &-wrapper {
     @extend %pagewidth;
     display: flex;
@@ -418,5 +434,21 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+  }
+}
+
+.copyright {
+  background-color: $color-black;
+  color: $color-white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  @include responsiveMax($responsive_switch--small) {
+    font-size: 1rem;
+  }
+
+  &-wrapper {
+    @extend %pagewidth;
   }
 }
