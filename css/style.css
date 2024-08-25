@@ -131,11 +131,16 @@ body {
     @media only screen and (max-width: 700px) {
       .about-rsvp__right {
         width: 100%; } }
+    .about-rsvp__right h2 {
+      font-family: "Chonburi", sans-serif; }
     .about-rsvp__right h3 {
       margin-bottom: 4rem; }
       @media only screen and (max-width: 700px) {
         .about-rsvp__right h3 {
           margin-bottom: 2rem; } }
+    @media only screen and (max-width: 700px) {
+      .about-rsvp__right p {
+        font-size: 1.4rem; } }
   .about-rsvp .btn {
     margin-top: 50px; }
 
