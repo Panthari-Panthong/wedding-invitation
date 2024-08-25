@@ -72,10 +72,8 @@ body {
 
 .countdown-container {
   text-align: center;
-  color: #40503a; }
-  @media only screen and (max-width: 700px) {
-    .countdown-container {
-      margin-top: 3rem; } }
+  color: #40503a;
+  margin-top: 3rem; }
   .countdown-container li {
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;

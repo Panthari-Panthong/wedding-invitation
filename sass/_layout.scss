@@ -40,10 +40,7 @@
   text-align: center;
   // padding: 20px 0;
   color: $color-dark-green;
-
-  @include responsiveMax($responsive_switch--small) {
-    margin-top: 3rem;
-  }
+  margin-top: 3rem;
 
   li {
     font-family: "Roboto", sans-serif;
